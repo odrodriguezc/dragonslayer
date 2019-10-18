@@ -35,7 +35,10 @@ let	dom = new Object ();
 	dom.playerName = dom.form.querySelector('#playerName');
 	dom.level = dom.form.querySelector('#gameLevel');
 	dom.gamePlayer = dom.form.querySelector('#gamePlayer');
-	dom.play = dom.form.querySelector('#play');
+    dom.play = dom.form.querySelector('#play');
+    dom.main = document.querySelector('main');
+    dom.main = document.querySelector('#game-log ul');             ///UL OU JE VAIS ECRIRE LE HTML 
+
 
 	
 
@@ -51,7 +54,7 @@ function play(){
 	game.level = dom.level.selectedIndex;
     game.userPlayer = dom.gamePlayer.selectedIndex;
     
-    dom.form.style.display = "none";                ///KILL THE  FORM
+    dom.form.style.display = "none";                         ///KILL THE  FORM
 
     console.log(game.playerName);
     console.log(game.level);
@@ -145,10 +148,10 @@ function playGame(){
 function endGame(){
     if (game.pvDragon > game.pvUser){
         console.log('dragon win');
-        document.write('<li class="game-end"><p class="title">Fin de la partie</p><p>Vous avez perdu le combat, le dragon vous a carbonisé !</p><img src="images/dragon-winner.png" alt="Dragon"></li>');
+        document.write ('<li class="game-end"><p class="title">Fin de la partie</p><p>Vous avez perdu le combat, le dragon vous a carbonisé !</p><img src="images/dragon-winner.png" alt="Dragon"></li>');
     }else{
         console.log('user win');
-        document.write('<li class="game-end"><p class="title">Fin de la partie</p><p>YOU WIN !</p><img src="images/knight-winner.png" alt="Chevalier"></li>');
+        document.write ('<li class="game-end"><p class="title">Fin de la partie</p><p>YOU WIN !</p><img src="images/knight-winner.png" alt="Chevalier"></li>');
     }
 }
 

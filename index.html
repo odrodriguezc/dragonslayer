@@ -12,6 +12,30 @@
 
 </head>
 <body>
+    <form id="optionsForm">
+            <h2>Game Options</h2>
+                <fieldset>
+                    <label for="name">Player name</label>
+                    <input type="text" name="playerName" id="playerName">
+                </fieldset>
+                <fieldset>
+                    <legend>Select Level</legend>
+                    <select name="gameLevel" id="gameLevel">
+                        <option value="EASY">EASY</option>
+                        <option value="NORMAL">NORMAL</option>
+                        <option value="HARD">HARD</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Select Player</legend>
+                    <select name="gamePlayer" id="gamePlayer">
+                        <option value="mage">Mage</option>
+                        <option value="chevalier">Chevalier</option>
+                        <option value="voleur">voleur</option>
+                    </select>
+                </fieldset>              
+                    <button type="button" id="play" value="play">Play</button>                           
+    </form>
     <section id="global-container">
         <img src="images/cloud1.png" alt="" id="cloud1" class="cloud">
         <img src="images/cloud2.png" alt="" id="cloud2" class="cloud">
@@ -20,37 +44,14 @@
                 <h1>Dragon slayer</h1>
             </header>
             <main>       
-                <form id="optionsForm">
-                <h2>Game Options</h2>
-                    <fieldset>
-                        <label for="name">Player name</label>
-                        <input type="text" name="playerName" id="playerName">
-                    </fieldset>
-                    <fieldset>
-                        <legend>Select Level</legend>
-                        <select name="gameLevel" id="gameLevel">
-                            <option value="EASY">EASY</option>
-                            <option value="NORMAL">NORMAL</option>
-                            <option value="HARD">HARD</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Select Player</legend>
-                        <select name="gamePlayer" id="gamePlayer">
-                            <option value="mage">Mage</option>
-                            <option value="chevalier">Chevalier</option>
-                            <option value="voleur">voleur</option>
-                        </select>
-                    </fieldset>              
-                        <button type="button" id="play" value="play">Play</button>                           
-                </form>
-
                 <img id="shield" src="images/shield.png" alt="">
                 <section id="game-log">
                     <ul>
-                        <li class="title">Que le combat commence !!</li>
-
+                        <li id="optionsli">
+                           
+                        </li>
                         
+                        <li class="title">Que le combat commence !!</li>
                         <script src="js/utilities.js"></script>
                         <script src="js/dragon-slayer.js"></script>
                     </ul>
